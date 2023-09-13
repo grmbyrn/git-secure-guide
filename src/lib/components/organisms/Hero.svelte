@@ -3,19 +3,19 @@
 	import GitHubIcon from '$lib/icons/socials/github.svelte';
 	import Button from '$lib/components/atoms/Button.svelte';
 	import Sparkles from '../atoms/Sparkles.svelte';
+	import Image from '../atoms/Image.svelte';
 </script>
 
 <section id="hero">
-	<h1 class="hello">This is a SvelteKit Static Blog Template!</h1>
-	<p class="intro">
-		<span class="left">It supports Markdown,</span>
-		<span class="right">and is really fast.</span>
-	</p>
+	<div class="image">
+		<Image src="/images/SGG-IndexHeader-1600x500.jpg" alt="Sample for the static template" />
+		<h1 class="hello">Secure Git Guide</h1>
+	</div>
 	<div class="ctas">
 		<Sparkles>
-			<Button href="https://github.com/matfantinel/sveltekit-static-blog-template">
+			<Button href="https://github.com/Nautilus-Cyberneering/secure-git-guide/tree/main">
 				<GitHubIcon slot="icon" />
-				Source Code
+				Edit on GitHub
 			</Button>
 		</Sparkles>
 		<Button color="primary" href="https://histoire-sveltekit-static-blog-template.vercel.app/">
@@ -44,26 +44,6 @@
 		.hello {
 			text-align: center;
 		}
-
-		.intro {
-			font-weight: 500;
-			font-size: 1.4rem;
-			width: min(100%, 440px);
-			display: flex;
-			flex-direction: column;
-
-			.left {
-				text-align: left;
-			}
-			.right {
-				text-align: right;
-			}
-
-			@include for-phone-only {
-				display: none;
-			}
-		}
-
 		.ctas {
 			display: flex;
 			flex-wrap: wrap;
